@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ArrowRight, MapPin, ShieldCheck, Wrench } from 'lucide-react'
+import { ArrowRight, ShieldCheck, Wrench } from 'lucide-react'
 import { classesBotao } from '../ui/Button'
 import { linkWhatsapp } from '../../lib/whatsapp'
-import { lojas } from '../../data/site'
 
 const provas = ['12 anos no Rio', 'Garantia por escrito', 'Conserto no mesmo dia']
 
@@ -21,16 +20,6 @@ export function Hero() {
 
       <div className="container-infocel relative grid items-center gap-20 lg:grid-cols-[1fr_1fr] lg:gap-14">
         <div>
-          <motion.p
-            className="vidro mb-8 inline-flex items-center gap-2.5 rounded-full px-4 py-2 text-[0.7rem] font-medium tracking-[0.18em] text-white/70 uppercase"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <MapPin size={13} className="text-azul-claro" aria-hidden="true" />
-            Botafogo · Vila Isabel
-          </motion.p>
-
           <h1 className="titulo-fino text-[3rem] text-balance sm:text-[4.2rem] lg:text-[5rem]">
             {['Celulares novos,', 'seminovos e'].map((linha, i) => (
               <motion.span
@@ -119,9 +108,6 @@ export function Hero() {
               height={900}
               className="w-full object-cover"
             />
-            <figcaption className="vidro-forte absolute top-4 left-4 rounded-full px-4 py-2 text-xs font-medium text-white/85">
-              iPhone 15 · a partir de R$ 4.299
-            </figcaption>
           </motion.figure>
 
           <motion.figure
@@ -141,22 +127,6 @@ export function Hero() {
               className="w-full object-cover"
             />
           </motion.figure>
-
-          <motion.ul
-            className="absolute -top-5 -right-2 hidden flex-col items-end gap-2 sm:-right-6 sm:flex"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            {lojas.map((loja) => (
-              <li
-                key={loja.id}
-                className="vidro-forte rounded-full px-3.5 py-1.5 text-[0.68rem] font-medium tracking-wide text-white/75"
-              >
-                {loja.nome.replace(' — ', ' · ')}
-              </li>
-            ))}
-          </motion.ul>
         </div>
       </div>
     </section>
