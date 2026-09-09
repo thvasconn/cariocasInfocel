@@ -91,7 +91,7 @@ export function Hero() {
         </div>
 
         {/* Duas fotos reais de aparelhos, em profundidade. */}
-        <div className="relative mx-auto w-full max-w-xl lg:mx-0 lg:self-start lg:-mt-10">
+        <div className="relative mx-auto w-full max-w-xl lg:mx-0 lg:self-start lg:-mt-4">
           <motion.figure
             style={{ y: fotoY }}
             className="relative overflow-hidden rounded-[1.75rem] border border-white/15 shadow-[0_50px_90px_-40px_rgba(0,0,0,1)]"

@@ -1,6 +1,36 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { ArrowLeft, Check, MessageCircle, ShieldCheck, Truck } from 'lucide-react'
+import {
+  ArrowLeft,
+  BadgeCheck,
+  BatteryCharging,
+  Bluetooth,
+  Box,
+  Camera,
+  Check,
+  CheckCircle2,
+  Cpu,
+  Eye,
+  Gauge,
+  Info,
+  Layers,
+  Magnet,
+  MemoryStick,
+  MessageCircle,
+  Mic,
+  Package,
+  Palette,
+  RotateCw,
+  ShieldCheck,
+  Shield,
+  Smartphone,
+  Sparkles,
+  Truck,
+  Usb,
+  Wifi,
+  Zap,
+  type LucideIcon,
+} from 'lucide-react'
 import { categorias, produtoPorId, produtos } from '../data/produtos'
 import { brl, linkWhatsapp } from '../lib/whatsapp'
 import { ProdutoImagem } from '../components/ui/ProdutoImagem'
@@ -15,6 +45,56 @@ const garantias = [
   { Icone: Truck, texto: 'Entrega no mesmo dia em Botafogo e Vila Isabel' },
   { Icone: Check, texto: 'Parcelamos em até 12x no cartão' },
 ]
+
+/** Ícone por palavra-chave da especificação — cobre os rótulos usados em src/data/produtos.ts. */
+const iconesPorPalavra: [string, LucideIcon][] = [
+  ['tela', Smartphone],
+  ['display', Gauge],
+  ['chip', Cpu],
+  ['processador', Cpu],
+  ['camera', Camera],
+  ['bateria', BatteryCharging],
+  ['capacidade', BatteryCharging],
+  ['garantia', ShieldCheck],
+  ['certificacao', ShieldCheck],
+  ['memoria', MemoryStick],
+  ['rede', Wifi],
+  ['bluetooth', Bluetooth],
+  ['material', Box],
+  ['protecao', Shield],
+  ['resistencia', Shield],
+  ['dureza', Shield],
+  ['compativel', Layers],
+  ['linhas', Layers],
+  ['cobertura', Layers],
+  ['interior', Layers],
+  ['aplicacao', Sparkles],
+  ['acabamento', Sparkles],
+  ['recursos', Sparkles],
+  ['tipo', Sparkles],
+  ['angulo', Eye],
+  ['potencia', Zap],
+  ['saida', Zap],
+  ['acompanha', Package],
+  ['portas', Usb],
+  ['conector', Usb],
+  ['cabo', Usb],
+  ['padrao', BadgeCheck],
+  ['fixacao', Magnet],
+  ['ima', Magnet],
+  ['rotacao', RotateCw],
+  ['cores', Palette],
+  ['microfone', Mic],
+  ['estado', CheckCircle2],
+]
+
+function iconeSpec(label: string): LucideIcon {
+  const alvo = label
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+  return iconesPorPalavra.find(([chave]) => alvo.includes(chave))?.[1] ?? Info
+}
 
 export default function ProdutoDetalhe() {
   const { id } = useParams<{ id: string }>()
@@ -147,23 +227,33 @@ export default function ProdutoDetalhe() {
                 </li>
               ))}
             </ul>
-
-            <div className="mt-10">
-              <h2 className="font-display text-lg font-bold uppercase">Especificações</h2>
-              <dl className="mt-4 divide-y divide-white/10 overflow-hidden rounded-2xl border border-white/10">
-                {produto.specs.map((spec) => (
-                  <div
-                    key={spec.label}
-                    className="flex flex-col gap-1 bg-white/[0.05] px-5 py-4 sm:flex-row sm:justify-between sm:gap-6"
-                  >
-                    <dt className="text-sm text-cinza">{spec.label}</dt>
-                    <dd className="text-sm font-semibold text-white sm:text-right">{spec.valor}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
           </Reveal>
         </div>
+
+        <Reveal delay={0.15}>
+          <div className="mt-12 vidro rounded-3xl p-6 sm:p-8">
+            <h2 className="font-display text-sm font-bold tracking-wide text-cinza uppercase">
+              Ficha técnica
+            </h2>
+            <dl className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+              {produto.specs.map((spec) => {
+                const Icone = iconeSpec(spec.label)
+                return (
+                  <div
+                    key={spec.label}
+                    className="rounded-xl border border-white/10 bg-white/[0.03] p-4"
+                  >
+                    <Icone size={18} className="text-azul-claro" aria-hidden="true" />
+                    <dt className="mt-3 text-[0.68rem] tracking-wide text-cinza/70 uppercase">
+                      {spec.label}
+                    </dt>
+                    <dd className="mt-0.5 text-sm font-semibold text-white">{spec.valor}</dd>
+                  </div>
+                )
+              })}
+            </dl>
+          </div>
+        </Reveal>
 
         {relacionados.length > 0 && (
           <section className="mt-24">
