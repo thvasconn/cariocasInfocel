@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Backups e imagens de referência soltas na raiz (não fazem parte do site)
+/backup-antes-fundo-premium/
+/image.png
+/logo-teste.png
