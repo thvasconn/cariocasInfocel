@@ -8,7 +8,7 @@ import { classesBotao } from '../ui/Button'
 
 export function Destaques() {
   return (
-    <section className="border-y border-white/10 bg-white/[0.02] py-20 lg:py-24">
+    <section className="relative z-0 border-y border-white/10 bg-noite py-20 lg:py-24">
       <div className="container-infocel">
         <Reveal>
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
