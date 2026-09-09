@@ -44,7 +44,7 @@ export default function Loja() {
     <>
       <Seo
         titulo="Loja — Celulares e acessórios | Cariocas Infocel Rio de Janeiro"
-        descricao="Celulares novos e seminovos, capas, películas, carregadores e fones. Compre pelo WhatsApp com entrega em todo o Rio de Janeiro."
+        descricao="Celulares novos e originais, capas, películas, carregadores e fones. Compre pelo WhatsApp com entrega em todo o Rio de Janeiro."
       />
 
       <section className="container-infocel pt-14 pb-8 lg:pt-20">

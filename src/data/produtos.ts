@@ -22,7 +22,7 @@ export type Produto = {
 }
 
 export const categorias: { id: CategoriaId; nome: string; descricao: string }[] = [
-  { id: 'celulares', nome: 'Celulares', descricao: 'Novos e seminovos com garantia' },
+  { id: 'celulares', nome: 'Celulares', descricao: 'Novos e lacrados com garantia' },
   { id: 'capas', nome: 'Capas', descricao: 'Anti-impacto, silicone e MagSafe' },
   { id: 'peliculas', nome: 'Películas', descricao: 'Vidro 3D, hidrogel e privacidade' },
   { id: 'carregadores', nome: 'Carregadores', descricao: 'Turbo, sem fio e power banks' },
@@ -57,15 +57,15 @@ export const produtos: Produto[] = [
     precoAntigo: 3499,
     badge: 'Promoção',
     destaque: true,
-    resumo: 'Seminovo vitrine, bateria acima de 90%.',
+    resumo: 'Lacrado, nota fiscal e 1 ano de garantia Apple.',
     descricao:
-      'iPhone 13 seminovo revisado na nossa bancada: bateria testada, câmeras, alto-falantes e conector conferidos item a item. Acompanha cabo novo e 90 dias de garantia da loja.',
+      'iPhone 13 lacrado de fábrica, com Face ID, tela Super Retina XDR OLED e câmera dupla de 12MP. Sai da loja configurado, com película e capa instaladas na hora, sem custo adicional.',
     specs: [
       { label: 'Tela', valor: '6.1" Super Retina XDR OLED' },
       { label: 'Chip', valor: 'A15 Bionic' },
-      { label: 'Saúde da bateria', valor: 'Acima de 90%' },
-      { label: 'Estado', valor: 'Seminovo — grade A' },
-      { label: 'Garantia', valor: '90 dias Cariocas Infocel' },
+      { label: 'Câmera', valor: '12MP + 12MP ultra-angular' },
+      { label: 'Bateria', valor: 'Até 19h de vídeo' },
+      { label: 'Garantia', valor: '12 meses Apple' },
     ],
     imagens: ['/img/produtos/iphone-13.png'],
   },

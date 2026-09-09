@@ -30,8 +30,8 @@ const posts = [
   },
   {
     id: 'p4',
-    titulo: 'iPhone 13 seminovo',
-    itens: ['Bateria acima de 90%', 'Revisado na bancada', 'Nota fiscal e garantia'],
+    titulo: 'iPhone 13 lacrado',
+    itens: ['Lacrado de fábrica', '1 ano de garantia Apple', 'Nota fiscal inclusa'],
     tag: 'R$ 3.099',
   },
   {

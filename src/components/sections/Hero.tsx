@@ -21,7 +21,7 @@ export function Hero() {
       <div className="container-infocel relative grid items-center gap-20 lg:grid-cols-[1fr_1fr] lg:gap-14">
         <div>
           <h1 className="titulo-fino text-[3rem] text-balance sm:text-[4.2rem] lg:text-[5rem]">
-            {['Celulares novos,', 'seminovos e'].map((linha, i) => (
+            {['Celulares novos,', 'originais e'].map((linha, i) => (
               <motion.span
                 key={linha}
                 className="block"

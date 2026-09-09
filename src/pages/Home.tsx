@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <Seo
         titulo="Cariocas Infocel — Celulares, Acessórios e Assistência Técnica no Rio de Janeiro"
-        descricao="Loja de celulares em Botafogo e Vila Isabel. Aparelhos novos e seminovos, capas, películas, carregadores e fones. Conserto com garantia e orçamento na hora pelo WhatsApp."
+        descricao="Loja de celulares em Botafogo e Vila Isabel. Aparelhos novos e originais, capas, películas, carregadores e fones. Conserto com garantia e orçamento na hora pelo WhatsApp."
       />
       <Hero />
       <SeparadorArco />

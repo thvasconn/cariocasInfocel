@@ -4,7 +4,7 @@ import { Reveal } from '../ui/Reveal'
 import { SectionTitle } from '../ui/SectionTitle'
 
 const diferenciais = [
-  'Garantia por escrito na nota — 90 dias no conserto e no seminovo, 1 ano nos aparelhos lacrados.',
+  'Garantia por escrito na nota — 90 dias no conserto, 1 ano nos aparelhos lacrados.',
   'Entrega rápida no Rio: mesmo dia para Botafogo, Vila Isabel e arredores.',
   'Assistência técnica própria, com bancada nas três lojas. Seu aparelho não vai para lugar nenhum.',
   'Produtos originais e homologados pela Anatel. Nada de carregador genérico que queima bateria.',

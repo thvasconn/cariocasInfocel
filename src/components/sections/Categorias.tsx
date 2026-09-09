@@ -7,7 +7,7 @@ import { SectionTitle } from '../ui/SectionTitle'
 const cards: { nome: string; descricao: string; para: string; Icone: LucideIcon }[] = [
   {
     nome: 'Celulares',
-    descricao: 'Novos e seminovos com nota e garantia',
+    descricao: 'Novos, originais e com nota fiscal',
     para: '/loja?categoria=celulares',
     Icone: Smartphone,
   },
