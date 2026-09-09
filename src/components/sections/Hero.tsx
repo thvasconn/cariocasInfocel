@@ -12,7 +12,7 @@ export function Hero() {
   const detalheY = useTransform(scrollY, [0, 800], [0, 60])
 
   return (
-    <section className="relative isolate -mt-20 overflow-hidden pt-40 pb-28 lg:pt-48 lg:pb-32">
+    <section className="relative isolate -mt-20 overflow-hidden pt-48 pb-28 lg:pt-56 lg:pb-32">
       <div
         className="pointer-events-none absolute top-0 right-0 h-[42rem] w-[42rem] translate-x-1/4 -translate-y-1/4 rounded-full bg-[radial-gradient(circle,rgba(30,144,240,0.2),transparent_62%)] blur-3xl"
         aria-hidden="true"
