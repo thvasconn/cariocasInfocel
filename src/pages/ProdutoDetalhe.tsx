@@ -35,7 +35,15 @@ export default function ProdutoDetalhe() {
         descricao={produto.resumo}
       />
 
-      <div className="relative z-0 bg-noite">
+      <div className="relative z-0 bg-fumaca/80">
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-azul to-transparent"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-azul to-transparent"
+          aria-hidden="true"
+        />
       <div className="container-infocel pt-8 pb-20 lg:pt-12">
         <nav aria-label="Você está em" className="mb-8 flex flex-wrap gap-2 text-sm text-cinza">
           <Link to="/loja" className="inline-flex items-center gap-1.5 hover:text-azul-claro">
