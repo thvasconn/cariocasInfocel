@@ -23,8 +23,8 @@ export type Loja = {
  */
 export const site = {
   nome: 'Cariocas Infocel',
-  handleInstagram: '@infocel',
-  urlInstagram: 'https://instagram.com/infocel',
+  handleInstagram: '@cariocasinfocel',
+  urlInstagram: 'https://www.instagram.com/cariocasinfocel/',
   /** Telefone em formato internacional, só dígitos — usado para montar os links do WhatsApp. */
   whatsapp: '5521999998888',
   whatsappExibicao: '(21) 99999-8888',
